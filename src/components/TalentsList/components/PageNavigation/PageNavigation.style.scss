@@ -1,0 +1,20 @@
+@import '../../../../styles/global';
+@import '../../../../styles/colors';
+
+@mixin font-style {
+  color: $lighter-font;
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 14px;
+}
+
+.pagination-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $blue-ghost;
+  .pagination-nav__text {
+    @include font-style;
+  }
+}

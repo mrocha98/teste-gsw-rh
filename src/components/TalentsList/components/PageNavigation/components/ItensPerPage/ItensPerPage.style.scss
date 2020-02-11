@@ -1,0 +1,14 @@
+@import '../../../../../../styles/colors';
+@import '../../PageNavigation.style.scss';
+
+.itens-per-page {
+  border-bottom: 1px $dark-font solid;
+  width: auto;
+  height: auto;
+  .itens-per-page__select {
+    width: auto;
+    @include font-style;
+    border: none;
+    background-color: transparent;
+  }
+}

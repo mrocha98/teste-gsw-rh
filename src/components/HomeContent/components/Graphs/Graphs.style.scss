@@ -1,0 +1,39 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/global';
+@import '../../../../styles/colors';
+
+.graphs {
+  // @include r;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px;
+  width: 100%;
+  .graphs__resumo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    font-family: $font-montserrat;
+    font-size: 0.7rem;
+    color: #7e7e7e;
+  }
+  .graphs__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+  }
+  @include for-phone-only {
+    display: flex;
+    align-items: initial;
+    .graphs__resumo {
+      margin: -20px;
+    }
+    .graphs__container {
+      display: block;
+    }
+  }
+}

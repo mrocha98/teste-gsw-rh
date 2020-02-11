@@ -1,0 +1,15 @@
+.prev-next-buttons {
+  display: flex;
+  .previous-page,
+  .next-page {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: #d1d1d1;
+    }
+  }
+}
+  

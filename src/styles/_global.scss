@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+// Fonts
+$font-montserrat: 'Montserrat', sans-serif;
+$font-bangers: 'Bangers', cursive;
+$font-nunito: 'Nunito', sans-serif;
+
+// Aliases
+$background-profile-container: linear-gradient(
+  252.66deg,
+  #114ca6 0%,
+  #142574 100%
+);
+
+$background-jobs-item: linear-gradient(
+  262.6deg,
+  #f8f8f8 0%,
+  rgba(249, 249, 249, 0.3) 100%
+);
+
+.--bold {
+  font-weight: bold;
+}
+
+.submit {
+  background: linear-gradient(265.95deg, #337ab7 0%, #5899d0 100%);
+  border: 1px solid #337ab7;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.input,
+.submit {
+  border: 1px solid #f2f2f2;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1.0625rem;
+  line-height: 1.25rem;
+  margin: 0.3125rem 0;
+  opacity: 0.85;
+  padding: 0.75rem;
+  text-decoration: none;
+  width: auto;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.input::placeholder,
+.submit {
+  font-size: 0.75rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .group__child {
+    margin-right: 0.25rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

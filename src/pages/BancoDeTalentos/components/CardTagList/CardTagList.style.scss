@@ -1,0 +1,56 @@
+.CardTagList {
+  background: #fcfcfc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px dashed #f2f2f2;
+  border-radius: 3px;
+  transition: 0.3s;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-bottom: 15px;
+
+  .CardTagListHeader{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .trash-format {
+    color: #797979;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .btn-icon {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
+  .tag-List {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .CardTagListTitle {
+    color: #797979;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+    flex: 1;
+  }
+
+}

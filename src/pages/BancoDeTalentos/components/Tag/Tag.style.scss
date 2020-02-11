@@ -1,0 +1,26 @@
+.Tag {
+  background: #337ab7;
+  border: 1px solid #337ab7;
+  border-radius: 20px;
+  list-style-type: none;
+  text-align: center;
+  padding: 0 4px;
+  margin: 2px 2px;
+
+  .TextTag {
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .BtnTag {
+    margin-left: 5px;
+    background: transparent;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+  }
+}

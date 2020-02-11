@@ -1,0 +1,12 @@
+@import '../../styles/colors';
+
+.dropdown-box {
+  position: relative;
+  &:hover,
+  &:active {
+    background-color: transparent;
+    .drop-container {
+      display: flex;
+    }
+  }
+}

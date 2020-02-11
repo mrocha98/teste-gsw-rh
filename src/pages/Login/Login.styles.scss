@@ -1,0 +1,68 @@
+@import '../../styles/mixins';
+@import '../../styles/global';
+
+.login-page {
+  display: grid;
+  font-family: $font-montserrat;
+  height: 100%;
+  place-items: center;
+  width: 100%;
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    height: 26.4375rem;
+    align-items: center;
+    width: 19.8125rem;
+    padding: 1rem;
+    border-radius: 2%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    .form__logo {
+      margin: 1.25rem;
+    }
+
+    .form__input,
+    .form__submit {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #f2f2f2;
+      border-radius: 0.25rem;
+      margin: 0.3125rem 0;
+      opacity: 0.85;
+      display: inline-block;
+      font-size: 1.0625rem;
+      line-height: 1.25rem;
+      text-decoration: none;
+
+      &:disabled {
+        opacity: 0.3;
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .form__forgot,
+    .form__input::placeholder,
+    .form__submit {
+      font-size: 0.75rem;
+    }
+
+    .form__forgot {
+      align-self: flex-start;
+      margin: 0.75rem 0.25rem;
+    }
+
+    .form__submit {
+      background: linear-gradient(265.95deg, #337ab7 0%, #5899d0 100%);
+      border: 1px solid #337ab7;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}

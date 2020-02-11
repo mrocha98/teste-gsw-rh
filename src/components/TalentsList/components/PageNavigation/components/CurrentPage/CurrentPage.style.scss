@@ -1,0 +1,9 @@
+@import '../../PageNavigation.style.scss';
+
+.current-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  @include font-style;
+}

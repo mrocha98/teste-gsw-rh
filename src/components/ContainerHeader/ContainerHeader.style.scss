@@ -1,0 +1,12 @@
+@import '../../styles/colors';
+@import '../../styles/_global';
+.container-header {
+  color: $dim-gray;
+  background-color: $blue-ghost;
+  padding: 15px;
+  font-family: $font-montserrat;
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 1px dashed lightgrey;
+  border-radius: 5px;
+}

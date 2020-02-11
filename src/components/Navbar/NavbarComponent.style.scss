@@ -1,0 +1,111 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+@include keyframes(rotate) {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  color: $whisper;
+  line-height: 15px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 12px;
+  width: 100%;
+  & a {
+    color: $whisper;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar--painel-1 {
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    .icon-bars {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 0.8rem;
+
+      &:hover,
+      &:active {
+        @include animation(rotate 750ms);
+        opacity: 0.75;
+      }
+    }
+  }
+
+  .navbar--painel-2 {
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    display: flex;
+    letter-spacing: 1px;
+
+    .navbar--input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+
+      &::-webkit-input-placeholder {
+        color: $whisper;
+        letter-spacing: 1px;
+      }
+    }
+    .navbar__avatar--cont {
+      display: flex;
+      align-items: center;
+      .navbar__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        height: 30px;
+        width: 30px;
+        border-radius: 0.5em;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+      .fa-down {
+        margin: 0.5rem;
+        align-self: center;
+      }
+    }
+
+    .fa-circle {
+      font-size: 5px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+@media screen and(max-width: 624px) {
+  .fa-circle {
+    display: none;
+  }
+  .link {
+    display: none !important;
+  }
+  .search {
+    display: none;
+  }
+  .navbar--painel-2 {
+    justify-content: flex-end !important;
+    display: contents !important;
+  }
+}

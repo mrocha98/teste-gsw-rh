@@ -1,0 +1,12 @@
+@import '../../styles/_colors.scss';
+@import '../../styles/_mixins.scss';
+@import '../../styles/_global.scss';
+
+.sidebar {
+  font-family: $font-montserrat;
+  height: auto;
+  width: 100%;
+  .int-by {
+    @include int-by;
+  }
+}

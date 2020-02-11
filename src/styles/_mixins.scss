@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+// media querys
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+// etc
+@mixin truncate-with-ellipsis($max-width) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $max-width;
+}
+
+@mixin generic-font-style {
+  color: $light-font;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@mixin int-by {
+  color: #d3d3d3;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 13px;
+  margin: 0 auto;
+  padding: 10px 8px;
+  width: 90%;
+}
+
+// debug
+@mixin r {
+  border: red solid 1px;
+}
+
+@mixin b {
+  border: blue solid 1px;
+}
+
+.r {
+  @include r;
+}
+.b {
+  @include b;
+}
+
+// animation
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($animation) {
+  -webkit-animation: #{$animation};
+  -moz-animation: #{$animation};
+  -ms-animation: #{$animation};
+  -o-animation: #{$animation};
+  animation: #{$animation};
+}

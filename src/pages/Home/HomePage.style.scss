@@ -1,0 +1,28 @@
+@import '../../styles/colors';
+
+.homepage {
+  display: flex;
+  height: calc(100vh - 150px);
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 0;
+  .homepage-container {
+    margin-top: -9.4rem;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 0.3fr 0.75fr 2fr 0.3fr;
+    grid-template-rows: 70px 2fr 70px;
+    grid-template-areas:
+      '. header header .'
+      '. sidebar container .'
+      '. footer footer .';
+    // border: 1px blue solid;
+    width: 100vw;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+    .container__sidebar {
+      margin-top: 0.99rem;
+    }
+  }
+}

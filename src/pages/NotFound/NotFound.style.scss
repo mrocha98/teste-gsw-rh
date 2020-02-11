@@ -1,0 +1,61 @@
+@import '../../styles/colors';
+@import '../../styles/global';
+@import '../../styles/mixins';
+
+@include keyframes(arrow-toggled) {
+  0% {
+    margin-left: 0;
+    margin-right: 0.75rem;
+  }
+  50% {
+    margin-left: 0.75rem;
+    margin-right: 0;
+  }
+  100% {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.not-found {
+  align-items: center;
+  display: grid;
+  font-family: $font-montserrat;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+
+  .not-found__file,
+  .not-found__titles {
+    margin: 1.5rem;
+  }
+
+  .not-found__file {
+    grid-column: 1;
+    justify-self: end;
+  }
+
+  .not-found__titles {
+    grid-column: 2;
+    justify-self: start;
+
+    h1 {
+      font-weight: bold;
+    }
+
+    h3 {
+      font-style: italic;
+    }
+
+    .titles__back {
+      background-color: transparent;
+      border: none;
+      color: $navy-blue;
+      cursor: pointer;
+      text-decoration: underline;
+      &:hover,
+      &:active {
+        @include animation(arrow-toggled 3s infinite);
+      }
+    }
+  }
+}

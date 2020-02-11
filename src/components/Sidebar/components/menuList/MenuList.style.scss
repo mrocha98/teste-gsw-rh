@@ -1,0 +1,106 @@
+@import '../../../../styles/_colors.scss';
+@import '../../../../styles/_mixins.scss';
+@import '../../../../styles/_global.scss';
+
+.menu-list {
+  width: 98%;
+  padding: 0 0.625rem 0.625rem;
+  backdrop-filter: saturate(180%) blur(9px);
+  background-color: rgba(250, 250, 250, 0.9);
+  border-bottom: #e8e8e8 dashed 1px;
+
+  .menu-list__principal {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.13);
+
+    .principal__link {
+      align-items: center;
+      background: linear-gradient(258.28deg, #ffffff 0.36%, #f7f7f7 100%);
+      border: 1px dashed $navy-blue;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: $navy-blue;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      font-size: 0.75rem;
+      font-style: normal;
+      padding: 0.8125rem 0.625rem 0.8125rem 0.625rem;
+      width: 100%;
+
+      @include for-phone-only {
+        svg {
+          height: 15px;
+          margin-right: 0.3rem;
+          width: 15px;
+        }
+      }
+
+      @include for-tablet-portrait-up {
+        svg {
+          height: 25px;
+          margin-right: 0.35rem;
+          width: 25px;
+        }
+      }
+
+      span {
+        line-height: 15px;
+      }
+    }
+  }
+
+  .menu-list__nav {
+    .nav__items {
+      list-style-type: none;
+      padding: 0;
+
+      .items__item {
+        font-weight: normal;
+        margin: 0.35rem 0;
+
+        &:hover {
+          font-weight: bold;
+        }
+
+        .item__link {
+          align-items: center;
+          color: $dim-gray;
+          cursor: pointer;
+          display: grid;
+          grid-template-columns: 0.5fr 2fr;
+          justify-items: center;
+
+          @include for-phone-only {
+            font-size: 0.7rem;
+          }
+
+          @include for-tablet-portrait-up {
+            font-size: 0.8125rem;
+          }
+
+          .link__icon {
+            margin: 0 0.25rem;
+            max-width: 1rem;
+            min-width: 0.8rem;
+            width: auto;
+          }
+
+          .link__text {
+            justify-self: flex-start;
+          }
+        }
+
+        .item__link--toggleable {
+          grid-template-columns: 0.5fr 1.5fr 0.5fr;
+          user-select: none; //evita que, ao clicar mais de uma vez, selecione os textos, prejudicando a ux no desktop
+
+          .link__icon--dropdown {
+            user-select: none; //necessário repetir, não herda esse atributo do elemento pai
+          }
+        }
+      }
+    }
+  }
+}

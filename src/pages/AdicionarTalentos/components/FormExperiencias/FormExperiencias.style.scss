@@ -1,0 +1,16 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/global';
+@import '../../../../styles/mixins';
+
+.form-experiencias {
+  .--bigger {
+    width: 100% !important;
+  }
+  .datepickers {
+    display: flex;
+    flex-direction: column;
+    .datepicker {
+      width: 50%;
+    }
+  }
+}

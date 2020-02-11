@@ -1,0 +1,150 @@
+@import '../../styles/mixins';
+
+.container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'box1 box2';
+  @import '../../styles/global';
+  .container__search {
+    grid-area: box1;
+    height: 100%;
+    width: 100%;
+    @include for-desktop-up {
+      overflow: auto;
+    }
+    .form-format {
+      margin: 21px;
+
+      .input-container {
+        position: relative;
+      }
+
+      .input-format {
+        background: #ffffff;
+        border: 1px solid #f2f2f2;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  }
+  .container__talents-result {
+    grid-area: box2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include for-desktop-up {
+      overflow-y: auto;
+    }
+
+  }
+  @include for-phone-only {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'box1'
+      'box2';
+  }
+  @include for-tablet-landscape-up {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'box1'
+      'box2';
+  }
+
+  @include for-tablet-portrait-up {
+    grid-template-columns: auto;
+    grid-template-areas:
+      'box1'
+      'box2';
+  }
+
+  @include for-desktop-up {
+    grid-template-areas: 'box1 box2';
+  }
+}
+
+.form-format {
+  margin: 21px;
+
+  .input-Label-radio {
+    position: relative;
+  }
+
+  .btn-register {
+    background: linear-gradient(264.29deg, #337ab7 0%, #5899d0 100%);
+    border: 1px solid #337ab7;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    height: 40px;
+    left: 377px;
+    line-height: 15px;
+    margin-top: 15px;
+    top: 197px;
+    &:hover {
+      background: linear-gradient(264.29deg, #4f89bb 0%, #7eb1dd 100%);
+      cursor: pointer;
+    }
+  }
+
+  .Label-radio {
+    position: relative;
+    padding-left: 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 12px;
+    color: #797979;
+  }
+
+  .Label-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .Radio-span {
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+  }
+
+  .Label-radio:hover input ~ .Radio-span {
+    background-color: rgb(231, 229, 229);
+  }
+
+  .Label-radio input:checked ~ .Radio-span {
+    border: 2px solid #3d82be;
+  }
+
+  .Radio-span:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  .Label-radio input:checked ~ .Radio-span:after {
+    display: block;
+  }
+
+  .Label-radio .Radio-span:after {
+    top: 23%;
+    left: 27%;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background: #3d82be;
+  }
+}

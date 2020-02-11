@@ -1,0 +1,33 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/global';
+@import '../../../../styles/mixins';
+
+.jobs-list {
+  padding: 5px;
+  height: 100%;
+  overflow-y: auto;
+  @include for-phone-only {
+    overflow-y: inherit;
+  }
+  @include for-tablet-portrait-up {
+    overflow-y: inherit ;
+  }
+  @include for-desktop-up {
+    overflow-y: auto;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: lightgray;
+}

@@ -1,0 +1,43 @@
+@import '../../../../styles/_colors.scss';
+@import '../../../../styles/_mixins.scss';
+@import '../../../../styles/_global.scss';
+
+.sub-items {
+  display: none;
+}
+
+.sub-items--active {
+  display: block;
+}
+
+.nav--sub {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  .sub-container__line {
+    border: 1px solid #dfdfdf;
+    grid-column: 1;
+    height: 80%;
+    margin: 0.5rem 0;
+    place-self: center;
+    width: 1px;
+  }
+
+  .nav__sub-items {
+    grid-column: 2;
+
+    .item__link--sub {
+      color: $dim-gray;
+      cursor: pointer;
+      margin-left: 0;
+
+      @include for-phone-only {
+        font-size: 0.65rem;
+      }
+
+      @include for-tablet-portrait-up {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

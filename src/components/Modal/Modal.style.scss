@@ -1,0 +1,81 @@
+@import '../../styles/colors';
+@import '../../styles/global';
+@import '../../styles/mixins';
+
+@mixin centralize($isAbsolute) {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+
+  @if isAbsolute {
+    position: absolute;
+  } @else {
+    position: relative;
+  }
+}
+
+.modal {
+  background-color: rgba(36, 36, 36, 0.75);
+  @include centralize($isAbsolute: true);
+  height: 100vh;
+  width: 100vw;
+
+  .modal__body {
+    background-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 11px 9px 16px -10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 11px 9px 16px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 11px 9px 16px -10px rgba(0, 0, 0, 0.5);
+    @include centralize($isAbsolute: false);
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    height: auto;
+    max-height: 70%;
+    min-height: 30%;
+    max-width: 90%;
+    min-width: 25%;
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 0 1rem;
+    text-align: center;
+    width: auto;
+
+    .body__header,
+    .body__content,
+    .body__footer {
+      width: 100%;
+    }
+
+    .body__header {
+      background-color: white;
+    }
+
+    .body__content {
+      place-self: center;
+    }
+
+    .body__footer {
+      border-top: 1px dashed lightgrey;
+      place-self: center;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .modal__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    position: absolute;
+    left: 90%;
+
+    &:hover,
+    &:active {
+      opacity: 0.65;
+      transform: rotate(180deg);
+      transition: 500ms;
+    }
+  }
+}
